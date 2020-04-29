@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Form </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    
+    <br>
+    <br>
+    <h4 style="text-align: center;">Add New Course and Its Code!</h4>
+    <br>
+    <div class="container" style="width: 70%;">
+    <form action="/createcourse" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Course Code</label>
+          <select name="course[code]">
+            <option value="SLC" selected>SLC*</option>
+            <option value="CLC">CLC</option>
+          </select>
+          <p><strong>where SLC="School Level Course" and CLC="College Level Course" </strong></p>
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Class Code</label>
+          <select name="course[classcode]">
+            <option value="class1" selected>class1</option>
+            <option value="class2">class2</option>
+            <option value="class3">class3</option>
+            <option value="class4">class4</option>
+            <option value="class5">class5</option>
+            <option value="class6">class6</option>
+            <option value="class7">class7</option>
+            <option value="class8">class8</option>
+            <option value="class9">class9</option>
+            <option value="class10">class10</option>
+            <option value="class11">class11</option>
+            <option value="class12">class12</option>
+            <option value="clat">clat</option>
+            <option value="cmat">cmat</option>
+            <option value="bank">bank</option>
+            <option value="crt">crt</option>
+            <option value="pgcet">pgcet</option>
+
+          </select>
+          <p><strong>where class1 if for class1 and so on! </strong></p>
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Course's Name</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="course[name]" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

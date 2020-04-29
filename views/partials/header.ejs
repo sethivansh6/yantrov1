@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>YantroMitra</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link rel = "icon" href =  
+"assets/images/ylogo.png" 
+        type = "image/x-icon"> 
+
+  <!-- Favicons -->
+  
+  <link href="assets/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/room.css" rel="stylesheet">
+  <link href="assets/css/scroll.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/register.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="icofont-envelope"></i><a href="mailto:pmkulkarni@yantromitra.in" style="font-size:large;">pmkulkarni@yantromitra.in</a>
+        <i class="icofont-phone"></i><a href="tel:+918618630980" style="font-size:large;">+918618630980</a>
+        
+      </div>
+      <div class="contact-info float-right">
+        <a href="" id="revbtn" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalScrollable" style="color: white;font-weight: 600;" >YantroTSAVA Registration Form</a>
+      </div>
+      
+    </div>
+  </section>
+
+
+    
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle" style="font-weight: 700;">YantroTSAVA</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form action="/yantrostava" method="POST">
+          <div class="form-group">
+            <label for="Deligate Name1">Deligate Name 1</label>
+            <input type="text" class="form-control" id="Deligate Name1" name="yantro[del1]">
+          </div>
+          <div class="form-group">
+            <label for="Deligate Name2">Deligate Name 2</label>
+            <input type="text" class="form-control" id="Deligate Name2" name="yantro[del2]">
+          </div>
+          <div class="form-group">
+            <label for="Deligate Name3">Deligate Name 3</label>
+            <input type="text" class="form-control" id="Deligate Name3" name="yantro[del3]">
+          </div>
+          <div class="form-group">
+            <label for="Taluka">Taluka</label>
+            <input type="text" class="form-control" id="Taluka" name="yantro[taluka]">
+          </div>
+          <div class="form-group">
+            <label for="District">District</label>
+            <input type="text" class="form-control" id="District" name="yantro[district]">
+          </div>
+          <div class="form-group">
+            <label for="Phone Number">Phone Number</label>
+            <input type="text" class="form-control" id="Phone Number" name="yantro[phnno]">
+          </div>
+          <div class="form-group">
+            <label for="School Name">School Name</label>
+            <input type="text" class="form-control" id="School Name" name="yantro[schoolname]">
+          </div>
+          <div class="form-group">
+            <label for="School Email">School Email</label>
+            <input type="text" class="form-control" id="School Email" name="yantro[schoolemail]">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+          <br>
+          <br>
+          <p>Note: School can send multiple teams. In case there is any change in delegate, the same can be notified by an email to <a href="mailtto:pmkulkarni@yantromitra.in">pmkulkarni@yantromitra.in</a> Every team can have one teacher accompanying it.
+            For further details call us at <a href="tel:8618630980">8618630980</a></p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Model ends-->
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light" style="text-transform: none;"><a href="index.ejs"><span>YantroMitra</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active" style="color:#4a8be9;"><a href="/">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <% if(currentUser && currentUser.isAdmin == true){%>
+          
+              <li><a href="/admin">Admin page<i class="icofont plus"></i></a></li>
+
+              <% } if(currentUser && currentUser.isSchoolAdmin == true){%>
+          
+                <li><a href="/schooladmin">Admin page<i class="icofont plus"></i></a></li>
+              
+              <%}if(!currentUser || (currentUser && currentUser.isSchoolAdmin == false && currentUser.isAdmin == false)){%>
+          <li><a href="#services">Our Courses<i class="icofont plus"></i></a></li>
+        <%}%>
+
+        <% if(!currentUser){ %>  
+        <li><a href="#" class="btn btn-warning" style="color: white; font-weight: 600;height: 100%;" id="loginbtn"><i class="fa fa-user"></i> Log In</a></li>
+
+         <% } else{ %>
+          <li><a href="/user/<%= currentUser._id %>" style="color: #083f88;"><strong><em><%= currentUser.name %></em></strong></a></li>
+         <li><a href="/logout">Logout</a></li>
+       <%	} %>
+        
+        
+        </ul>
+        
+      </nav><!-- .nav-menu -->
+
+    </div>
+
+
+      
+
+  </header><!-- End Header -->
+
+  <!--Message-->
+  <div class="container">
+    <% if(error && error.length>0) {%>
+      <br>
+    <h5><div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div></h5>
+    <% } %>
+    <% if(success && success.length>0){%>
+      <br>
+   <h5><div class="alert alert-success" role="alert">
+      <%= success %>
+    </div></h5>
+    
+    <% } %>	
+  </div>
+
+<div id="loginbox" style="height: 300px;width: 400px;z-index: 99999;position:absolute;top:10%;right: 10%;display: none;background-color: white;padding: 20px;border-radius: 4px;">
+  <span id="cl" style="float: right;color: black; cursor: pointer;"><i class="icofont-remove">X</i></span>
+  <form action="/login" method="POST">
+    <div class="form-group">
+      <label for="Deligate Name1">Username</label>
+      <input type="email" class="form-control" id="Deligate Name1" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="Deligate Name2">Password</label>
+      <input type="password" class="form-control" id="Deligate Name2" name="password" required>
+    </div>
+    
+
+    <button type="submit" class="btn btn-warning" style="color:white;">LogIn</button>
+    <br>
+  </form>
+  <br>
+  <h6>Don't have an account? <a href="/register">Register Here</a></h6>
+</div>
+  

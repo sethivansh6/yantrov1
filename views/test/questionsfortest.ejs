@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YantroMitra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container" style="margin: 50px auto; padding: 20px;width: 65%;justify-content: center;">
+
+        <!--Message-->
+  <div class="container">
+    <% if(error && error.length>0) {%>
+      <br>
+    <h5><div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div></h5>
+    <% } %>
+    <% if(success && success.length>0){%>
+      <br>
+   <h5><div class="alert alert-success" role="alert">
+      <%= success %>
+    </div></h5>
+    
+    <% } %>	
+  </div>
+
+        <h2 style="text-align: center;">Create Question for Test : <%=test.title%></h2>
+        <form action="/questionsfortest/<%=test._id%>" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="example">Question</label>
+            <textarea type="text" rows="2" class="form-control" id="example" placeholder="Question" name="ques[ques]" required></textarea>
+          </div>
+            <div class="form-group">
+              <label for="image">Image for question</label><br>
+              <input type="file" id="image" name="image" accept="image/*">
+          </div>
+            <div class="form-group">
+                <label for="example">Option A</label>
+                <input type="text" class="form-control" id="example" placeholder="Option A" name="ques[option1]" required>
+              </div>
+              <div class="form-group">
+                <label for="example">Option B</label>
+                <input type="text" class="form-control" id="example" placeholder="Option B" name="ques[option2]" required>
+              </div>
+              <div class="form-group">
+                <label for="example">Option C</label>
+                <input type="text" class="form-control" id="example" placeholder="Option C" name="ques[option3]" required>
+              </div>
+              <div class="form-group">
+                <label for="example">Option D</label>
+                <input type="text" class="form-control" id="example" placeholder="Option D" name="ques[option4]" required>
+              </div>
+              <div class="form-group">
+                <label for="example">Correct Answer</label>
+                <input type="text" class="form-control" id="example" placeholder="Write Correct Ans" name="ques[correct]" required>
+              </div>
+
+              <div class="form-group">
+                <label for="example">Solution</label>
+                <textarea type="text" rows="6" class="form-control" id="example" placeholder="Write Solution Here" name="ques[solution]" required></textarea>
+              </div>
+            <br>
+        
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+          </form>
+          <br>
+          <a href="/" class="btn btn-primary">Home</a>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

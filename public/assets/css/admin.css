@@ -1,0 +1,36 @@
+body{
+    font-family: "Raleway", sans-serif;
+    background-color: rgba(0,0,0,.03);
+    
+  
+}
+
+h1{
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #5c768d;
+    
+}
+.card-header{
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(214, 215, 216, 0.6);
+
+
+}
+h2{
+    color: #5c768d;
+}
+.left-box{
+ 
+    width: 80%;
+}
+.mb-0{
+    text-align: center;
+}
+.right-box{
+   
+    width: 80%;
+}
+
+

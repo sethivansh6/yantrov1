@@ -1,0 +1,117 @@
+.form-control-primary {
+  margin: 10px;
+  opacity: 0.2;
+  border-radius: 2px;
+}
+#ans{
+  font-family: 'Zilla Slab', serif;
+  font-size: medium;
+}
+.tag{
+  display: inline;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  margin: 6.5px;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #d3d3d3;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tags{
+  display: inline;
+}
+.blah{
+    display: block;
+}
+.sidebar {
+  position: fixed;
+  width: 16%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 100;
+  padding: 70px 0 0 10px;
+  border-right: 1px solid #d3d3d3;
+}
+
+.answer
+{
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin: 8px;
+  font-size: 18px;
+}
+.left-sidebar {
+  position: sticky;
+  top:0;
+  height: calc(100vh - 70px);
+  overflow-y:auto;
+}
+.move-to-left {
+  -webkit-transform: translateX(-400px);
+  -moz-transform: translateX(-400px);
+  -ms-transform: translateX(-400px);
+  -o-transform: translateX(-400px);
+  transform: translateX(-400px);
+}
+
+
+.sidebar-nav li .nav-link {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+main {
+  padding-top: 1%;
+}
+main .card {
+  margin-bottom: 20px;
+}
+h5{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box{
+    
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+justify-content: center;
+align-items: center;
+  padding: 20px;
+  transition: display 0.5s ease-in-out;
+z-index: 99999;
+box-shadow: 0px 0 16px rgba(0, 0, 0, 0.2);
+background: white;
+width: 10vh;
+height: 10vh;
+}
+
+.icofont-chat{
+  font-size: xx-large;
+  color: #428bca;
+  vertical-align: middle;
+}
+
+#message
+{
+  transition: display 0.5s ease-in-out;
+  box-shadow: 0px 0 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  padding: 25px;
+  height: 300px;
+  background-color: white;
+  width: 400px;
+  border-radius: 10px;
+  z-index: 99999;
+  position: fixed;
+  bottom: 80px;
+  left: 15px;
+}
+
+
+
+
+
+
+
+
+

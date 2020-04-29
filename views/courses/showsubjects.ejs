@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YantroMitra | Class 12</title>
+    <link rel = "icon" href =  
+"../assets/images/ylogo.png" 
+        type = "image/x-icon"> 
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="../assets/images/b1.PNG" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+          <br>
+          <h2 style="text-align: center;">Welcome To <strong>YantroMitra</strong> Personalized Learning</h2>
+          <hr style="width: 40%;">
+          <br>
+          <br>
+          <h5>At YantroMitra we offer the best course content, better than our competitor and at a very affordable rates.</h5>
+          <br>
+          <br>
+          <h5><strong>To open the particular section click on the subject of particular class below.</strong></h5>
+          <br>
+          <br>
+
+          <h4>
+            <%= course.name %> :-
+              
+            </h4>
+            <br>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Subjects</th>
+                  <th scope="col">PDF Link</th>
+                  <th scope="col">Test Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                  
+                  <% course.subjects.forEach(function(subject){ %>
+                <tr>
+                  <th scope="row">#</th>
+                  <td><a href="/course/<%=course._id%>/subject/<%= subject._id %>" style="color: black;font-weight: 700;font-size: large;"><%= subject.name %></a></td>
+                  <td><a href="<%= subject.link %>" target="_blank">Download pdf</a></td>
+                  <td><a href="<%= subject.link %>" target="_blank">Try out our test!</a></td>
+                </tr>
+                <% })%>
+               
+                
+              </tbody>
+            </table>
+  <br>
+  <br>
+      </div>
+    
+    
+<div style="background: #3b5e7c; height: 100px;text-align: center;position: relative;" >
+      <div class="container" style="color: white; position:absolute;top: 44%;left:11.5%;">
+        <div>
+          &copy; Copyright <strong><span>YantroMitra</span></strong>. All Rights Reserved
+        </div>
+    </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

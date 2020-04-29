@@ -1,0 +1,58 @@
+<%- include('partials/header.ejs') %>
+<div id="login-box">
+    <div class="leftbox">
+      <h1>Sign up</h1>
+      <form action="/register" method="POST" class="register">
+        <br><br>
+      <input class="signup" type="email" name="username" placeholder="E-mail" required/>
+      <input class="signup"  type="password" name="password" placeholder="Password" required />
+      <input class="signup" type="text" name="name" placeholder="Full name" required>
+      <input class="signup" type="text" name="phone" placeholder="Phone number" required>
+      <input class="signup" type="text" name="area" placeholder="City/Village" required>
+      <input class="signup" type="text" name="state" placeholder="State" required>
+          <select name="education" required class="signup">
+            <option value="class1" selected>Class 1</option>
+            <option value="class2">Class 2</option>
+            <option value="class3">Class 3</option>
+            <option value="class4">Class 4</option>
+            <option value="class5">Class 5</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            <option value="class11">Class 11</option>
+            <option value="class12">Class 12</option>
+            <option value="clat">CLAT</option>
+            <option value="cmat">CMAT</option>
+            <option value="bank">BANK</option>
+            <option value="crt">CRT</option>
+            <option value="pgcet">PGCET</option>
+          </select>
+          <small id="emailHelp" class="form-text text-muted">Choose course you want to study on YantroMitra!</small>
+  
+      
+      <input class="submitbutton" type="submit"  name="signup_submit" value="Sign me up" />
+    </form>
+    <br>
+    <div style="font-size: small;">Already have a account? <a href="/login" style="font-size: large; font-weight: 600;">LogIn</a></div>
+    <br>
+    <div style="font-size: small;">Register as a school? <a href="/school" style="font-size: large; font-weight: 600;">SignUp</a></div>
+  <br>
+  <div style="font-size: small;">Register as a admin? <a href="/registeradmin" style="font-size: large; font-weight: 600;">SignUp</a></div>  
+  </div>
+  </div>
+  
+
+
+
+
+  <%- include('partials/footer.ejs') %>
+
+
+
+
+
+
+
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YantroMitra | Class 12</title>
+    <link rel = "icon" href =  
+"../assets/images/ylogo.png" 
+        type = "image/x-icon"> 
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link href="../assets/css/blah.css" rel="stylesheet">
+    </head>
+
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    
+  
+<br>
+<br>
+<div class="container">
+
+    <h4>Choose the Chapter you want to study!</h4>
+    <br>
+    <h5>Subject :- <strong><%=subject.name %></strong></h5>
+    <br>
+    <div class="container">
+        <% subject.chapters.forEach(function(chap){ %>
+        <div class="name">
+            <a href="/subject/<%=subject._id%>/chapter/<%= chap._id%>"><%= chap.name %></a>
+        </div>
+        <% }) %>
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+
+    
+    
+<div style="background: #3b5e7c; height: 100px;text-align: center;position: relative;" >
+      <div class="container" style="color: white; position:absolute;top: 44%;left:11.5%;">
+        <div>
+          &copy; Copyright <strong><span>YantroMitra</span></strong>. All Rights Reserved
+        </div>
+    </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
