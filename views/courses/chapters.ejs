@@ -145,6 +145,7 @@
        <div class="card">
          <div class="card-body">
            <a href="/subject/<%=subject._id%>/chapter/<%= chap._id%>"> <h5 class="card-title">Chapter <%=f+1%> :- <%=chap.name%></h5></a>
+           <a href="<%=chap.link%>"> <p class="card-title">Download Material</p></a>
            <% if(currentUser && (currentUser.isAdmin == true ||currentUser.isSchoolAdmin == true)){%>
            <a class="btn btn-sm btn-primary"  href="/subject/<%= subject._id %>/chapter/<%= chap._id %>/edit">Edit</a>
            <form  style="display: inline;" action="/subject/<%=subject._id%>/chapter/<%= chap._id%>?_method=DELETE" method="POST">

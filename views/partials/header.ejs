@@ -182,21 +182,20 @@
     <% } %>	
   </div>
 
-<div id="loginbox" style="height: 300px;width: 400px;z-index: 99999;position:absolute;top:10%;right: 10%;display: none;background-color: white;padding: 20px;border-radius: 4px;">
+<div id="loginbox" style="max-height: 310px;z-index: 9999;position:fixed;top:10%;right: 10%;display: none;background-color: white;padding: 20px;border-radius: 4px;">
   <span id="cl" style="float: right;color: black; cursor: pointer;"><i class="icofont-remove">X</i></span>
   <form action="/login" method="POST">
     <div class="form-group">
       <label for="Deligate Name1">Username</label>
-      <input type="email" class="form-control" id="Deligate Name1" name="username" required>
+      <input type="email" class="form-control" id="Deligate Name1" name="username" placeholder="Email" required>
     </div>
     <div class="form-group">
       <label for="Deligate Name2">Password</label>
-      <input type="password" class="form-control" id="Deligate Name2" name="password" required>
+      <input type="password" class="form-control" id="Deligate Name2" name="password" placeholder="password" required>
     </div>
     
 
     <button type="submit" class="btn btn-warning" style="color:white;">LogIn</button>
-    <br>
   </form>
   <br>
   <h6>Don't have an account? <a href="/register">Register Here</a></h6>

@@ -96,10 +96,18 @@
       <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 1.5%;margin-left: 1.5%;">
        <h5 style="color: #083f88;"> <i class="fa fa-newspaper" style="color: #083f88;font-weight: 700;"></i><strong> Notification/News</strong> </h5>
        <hr style="width: 100%;">
-       <%not.forEach(function(not){%>
-        <a href="<%=not.link%>" style="text-decoration: none;color: black;"><h6><i class="fa fa-bell" style="color: darkred;"></i> <%=not.message%></h6></a>
+       <% var len=not.length%>
+       <%for(var i=len-1;i>=0;i--){%>
+        <a href="<%=not[i].link%>" style="text-decoration: none;color: black;"><h6><i class="fa fa-bell" style="color: darkred;"></i> <%=not[i].message%></h6></a>
+        <% if(currentUser && (currentUser.isAdmin == true)){%>
+        <form  style="display: inline" action="/notification/<%= not._id%>?_method=DELETE" method="POST">
+          <button class="btn btn-sm btn-danger">
+            Delete
+          </button>
+        </form>
+        <%}%>
         <hr style="border-top: 1px dashed rgba(0,0, 0, 0.2);">
-        <%})%>
+        <%}%>
     </div>
     </div>
         
@@ -125,10 +133,11 @@
       <div class="col-lg-4 col-md-4 course-box" style="text-align: center;margin-top: 1.5%;">
         <h4 class="title" style="font-size: x-large;"><a href="#">Entrance Level Courses</a></h4>
         <div class="row text-center" style="display:flex; flex-wrap: wrap;padding: 1%;">
-            <div class="col-lg-6 co-md-6 col-sm-6 col-xs-6 blah"><div class="element f"><a href="#">PGCET</a></div></div>
-            <div class="col-lg-6 co-md-6 col-sm-6 col-xs-6 blah"><div class="element f"><a href="#">CRT</a></div></div>
-            <div class="col-lg-6 co-md-6 col-sm-6 col-xs-6 blah"><div class="element f"><a href="#">CMAT</a></div></div>
-            <div class="col-lg-6 co-md-6 col-sm-6 col-xs-6 blah"><div class="element f"><a href="#">NIMCET</a></div></div>
+          <% course.forEach(function(course){ %>
+            <% if(course.code == "CLC"){ %>
+          <div class="col-lg-6 co-md-6 col-sm-6 col-xs-6 blah"><div class="element f"><a href="/course/<%= course._id %>"><%= course.name %></a></div></div>
+            <%}%>
+            <%})%>
         </div>
       </div>
 

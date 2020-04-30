@@ -38,8 +38,8 @@ var express                   = require("express"),
 
     //========Mongoose Connection=========
 
-    mongoose.connect("mongodb+srv://vansh7:Password12$@yantromitra-hkvgy.mongodb.net/test?retryWrites=true&w=majority",{useUnifiedTopology: true, useNewUrlParser: true});
     
+    mongoose.connect("mongodb+srv://vansh7:Password12$@yantromitra-hkvgy.mongodb.net/test?retryWrites=true&w=majority",{useUnifiedTopology: true, useNewUrlParser: true});
     //mongoose.connect("mongodb://localhost/yantromitra",{useUnifiedTopology: true, useNewUrlParser: true});
     mongoose.set('useFindAndModify', false);
     mongoose.set('useCreateIndex', true);
@@ -412,8 +412,16 @@ app.get("/subject/:subject_id/chapter/:id",isLoggedIn,function(req,res){
 
 
   app.get("/register",function(req,res){
-
-     res.render("register",{message:req.flash("error")});
+    Course.find({},function(err,course){
+      if(err)
+      {
+        console.log(err);
+      }
+      else
+      {
+        res.render("register",{message:req.flash("error"),course:course});
+      }
+    });     
    });
 
 //===========Admin===========
@@ -927,7 +935,7 @@ Course.findById(req.params.course_id,function(err,course)
   //console.log("ADDED COURSE IS "+course);
   Subject.findById(req.params.subject_id,function(err,subject){
 
-    Chapters.create({name:req.body.name},function(err,chap){
+    Chapters.create({name:req.body.name,link:req.body.link},function(err,chap){
 
       chap.detail.id=subject.id;
       chap.detail.course=course.name;
